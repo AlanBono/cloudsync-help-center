@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Troubleshooting Sync Issues - CloudSync Help Center</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="20" cy="20" r="20" fill="url(#gradient)"/>
+                        <path d="M20 10C15.58 10 12 13.58 12 18C12 19.61 12.57 21.09 13.5 22.27L11.71 24.06C10.63 22.5 10 20.61 10 18.5C10 12.71 14.71 8 20.5 8C26.29 8 31 12.71 31 18.5C31 20.61 30.37 22.5 29.29 24.06L27.5 22.27C28.43 21.09 29 19.61 29 18C29 13.58 25.42 10 21 10H20Z" fill="white"/>
+                        <path d="M20 26C22.21 26 24 24.21 24 22C24 19.79 22.21 18 20 18C17.79 18 16 19.79 16 22C16 24.21 17.79 26 20 26Z" fill="white"/>
+                        <defs>
+                            <linearGradient id="gradient" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
+                                <stop offset="0%" stop-color="#667eea"/>
+                                <stop offset="100%" stop-color="#764ba2"/>
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                    <span class="logo-text">CloudSync</span>
+                </div>
+                <nav class="nav">
+                    <a href="../index.html" class="nav-link">Home</a>
+                    <a href="#contact" class="nav-link">Contact Support</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <section class="article-header">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="../index.html">Home</a>
+                <span>/</span>
+                <a href="../category-troubleshooting.html">Troubleshooting</a>
+                <span>/</span>
+                <span>Sync Issues</span>
+            </div>
+            <h1 class="article-title">Troubleshooting Sync Issues</h1>
+            <div class="article-meta">
+                <span>📖 8 min read</span>
+                <span>⏰ Last updated: November 2024</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="categories">
+        <div class="container">
+            <div class="article-content">
+                <div class="article-body">
+                    <p>If your files aren't syncing properly, this guide will help you identify and fix the most common sync issues in CloudSync.</p>
+
+                    <h2>Quick Checks</h2>
+                    <p>Before diving into detailed troubleshooting, try these quick fixes:</p>
+                    <ol>
+                        <li><strong>Check your internet connection</strong> - Make sure you're online</li>
+                        <li><strong>Restart CloudSync</strong> - Exit completely and restart the app</li>
+                        <li><strong>Check CloudSync status</strong> - Look for the sync icon in your system tray/menu bar</li>
+                        <li><strong>Verify you're signed in</strong> - Make sure you're logged into the correct account</li>
+                    </ol>
+
+                    <h2>Common Sync Problems</h2>
+
+                    <h3>Files Won't Upload</h3>
+                    <p><strong>Symptom:</strong> Files remain stuck in "uploading" status or fail to upload</p>
+                    
+                    <p><strong>Possible Causes & Solutions:</strong></p>
+                    <ul>
+                        <li><strong>File is too large:</strong> Free accounts have a 100MB file size limit. Upgrade to Pro for files up to 5GB.</li>
+                        <li><strong>Insufficient storage:</strong> Check your storage quota in Settings. Delete old files or upgrade your plan.</li>
+                        <li><strong>File name contains special characters:</strong> Rename files to remove characters like: <code>\ / : * ? " &lt; &gt; |</code></li>
+                        <li><strong>File is open in another program:</strong> Close the file before syncing.</li>
+                    </ul>
+
+                    <div class="note">
+                        <p><strong>Tip:</strong> Check the sync queue in CloudSync settings to see which files are pending and any error messages.</p>
+                    </div>
+
+                    <h3>Sync Is Slow</h3>
+                    <p><strong>Symptom:</strong> Files sync, but it takes much longer than expected</p>
+
+                    <p><strong>Solutions:</strong></p>
+                    <ol>
+                        <li><strong>Check your upload speed:</strong> Run a speed test at speedtest.net. CloudSync speed is limited by your internet connection.</li>
+                        <li><strong>Pause other uploads:</strong> Temporarily pause other apps using your internet (streaming, downloads, etc.)</li>
+                        <li><strong>Adjust bandwidth limits:</strong>
+                            <ul>
+                                <li>Open CloudSync settings</li>
+                                <li>Go to <strong>Network</strong></li>
+                                <li>Increase the upload rate limit or set to "Unlimited"</li>
+                            </ul>
+                        </li>
+                        <li><strong>Sync during off-peak hours:</strong> Schedule large uploads for nighttime when internet traffic is lower</li>
+                    </ol>
+
+                    <h3>Files Not Appearing on Other Devices</h3>
+                    <p><strong>Symptom:</strong> Files uploaded from one device don't appear on another</p>
+
+                    <p><strong>Troubleshooting Steps:</strong></p>
+                    <ol>
+                        <li>Verify sync is complete on the first device (check for sync icon)</li>
+                        <li>On the second device, click the CloudSync icon and select <strong>"Sync Now"</strong></li>
+                        <li>Make sure both devices are signed into the same account</li>
+                        <li>Check if selective sync is hiding the files:
+                            <ul>
+                                <li>Go to CloudSync Settings → <strong>Selective Sync</strong></li>
+                                <li>Make sure the folder isn't unchecked</li>
+                            </ul>
+                        </li>
+                    </ol>
+
+                    <h3>Sync Conflicts</h3>
+                    <p><strong>Symptom:</strong> CloudSync creates "conflicted copy" files</p>
+
+                    <p><strong>Why this happens:</strong> When the same file is edited on multiple devices before syncing, CloudSync can't determine which version to keep.</p>
+
+                    <p><strong>How to resolve:</strong></p>
+                    <ol>
+                        <li>Review both versions of the file</li>
+                        <li>Decide which version to keep (or merge changes manually)</li>
+                        <li>Delete the conflicted copy you don't need</li>
+                        <li>Rename the file you want to keep (remove "conflicted copy" from filename)</li>
+                    </ol>
+
+                    <div class="warning">
+                        <p><strong>Prevention:</strong> To avoid conflicts, always sync before editing files, especially when working across multiple devices.</p>
+                    </div>
+
+                    <h2>Sync Has Stopped Completely</h2>
+
+                    <h3>Check CloudSync Status</h3>
+                    <p>Look at the CloudSync icon in your system tray (Windows) or menu bar (macOS):</p>
+                    <ul>
+                        <li><strong>Green checkmark:</strong> Everything is synced</li>
+                        <li><strong>Blue arrows:</strong> Currently syncing</li>
+                        <li><strong>Yellow warning:</strong> Minor issue (usually resolves automatically)</li>
+                        <li><strong>Red X:</strong> Sync error - needs attention</li>
+                        <li><strong>Gray/offline:</strong> No internet connection</li>
+                    </ul>
+
+                    <h3>Restart Sync Service</h3>
+                    
+                    <p><strong>On Windows:</strong></p>
+                    <ol>
+                        <li>Right-click the CloudSync icon in system tray</li>
+                        <li>Select <strong>"Quit CloudSync"</strong></li>
+                        <li>Wait 10 seconds</li>
+                        <li>Launch CloudSync from Start menu</li>
+                    </ol>
+
+                    <p><strong>On macOS:</strong></p>
+                    <ol>
+                        <li>Click CloudSync icon in menu bar</li>
+                        <li>Select <strong>"Quit CloudSync"</strong></li>
+                        <li>Wait 10 seconds</li>
+                        <li>Open CloudSync from Applications</li>
+                    </ol>
+
+                    <h3>Clear Cache and Reset Sync</h3>
+                    <p>If restarting doesn't work, try clearing the cache:</p>
+
+                    <div class="warning">
+                        <p><strong>Warning:</strong> This will re-sync all your files. For large libraries, this may take several hours.</p>
+                    </div>
+
+                    <ol>
+                        <li>Open CloudSync settings</li>
+                        <li>Go to <strong>Advanced</strong></li>
+                        <li>Click <strong>"Clear Cache"</strong></li>
+                        <li>Confirm the action</li>
+                        <li>Restart CloudSync</li>
+                    </ol>
+
+                    <h2>Firewall and Antivirus Issues</h2>
+                    <p>Sometimes security software blocks CloudSync from syncing:</p>
+
+                    <h3>Check Firewall Settings</h3>
+                    <p><strong>Windows Firewall:</strong></p>
+                    <ol>
+                        <li>Go to Control Panel → Windows Defender Firewall</li>
+                        <li>Click <strong>"Allow an app through firewall"</strong></li>
+                        <li>Look for CloudSync in the list</li>
+                        <li>Make sure both Private and Public are checked</li>
+                    </ol>
+
+                    <p><strong>macOS Firewall:</strong></p>
+                    <ol>
+                        <li>Go to System Preferences → Security & Privacy → Firewall</li>
+                        <li>Click the lock to make changes</li>
+                        <li>Click <strong>"Firewall Options"</strong></li>
+                        <li>Make sure CloudSync is allowed to receive incoming connections</li>
+                    </ol>
+
+                    <h3>Antivirus Whitelist</h3>
+                    <p>Add CloudSync to your antivirus whitelist:</p>
+                    <ul>
+                        <li>CloudSync application folder</li>
+                        <li>CloudSync sync folder</li>
+                        <li>Processes: <code>CloudSync.exe</code> or <code>CloudSync.app</code></li>
+                    </ul>
+
+                    <h2>Advanced Troubleshooting</h2>
+
+                    <h3>Check CloudSync Logs</h3>
+                    <p>View detailed logs to identify specific errors:</p>
+
+                    <p><strong>Windows:</strong></p>
+                    <pre style="background: #f7fafc; padding: 1rem; border-radius: 8px; overflow-x: auto;"><code>%APPDATA%\CloudSync\logs\</code></pre>
+
+                    <p><strong>macOS:</strong></p>
+                    <pre style="background: #f7fafc; padding: 1rem; border-radius: 8px; overflow-x: auto;"><code>~/Library/Logs/CloudSync/</code></pre>
+
+                    <p><strong>Linux:</strong></p>
+                    <pre style="background: #f7fafc; padding: 1rem; border-radius: 8px; overflow-x: auto;"><code>~/.config/CloudSync/logs/</code></pre>
+
+                    <h3>Reinstall CloudSync</h3>
+                    <p>As a last resort, try a clean reinstallation:</p>
+                    <ol>
+                        <li>Uninstall CloudSync completely</li>
+                        <li>Restart your computer</li>
+                        <li>Download the latest version from cloudsync.com</li>
+                        <li>Install and sign back in</li>
+                    </ol>
+
+                    <div class="note">
+                        <p><strong>Note:</strong> Your files in the cloud are safe during reinstallation. They'll sync back down automatically.</p>
+                    </div>
+
+                    <h2>Still Having Issues?</h2>
+                    <p>If you've tried everything above and sync still isn't working:</p>
+                    <ul>
+                        <li><strong>Check CloudSync Status:</strong> Visit status.cloudsync.com to see if there's a service outage</li>
+                        <li><strong>Contact Support:</strong> Our team can access your sync logs remotely to diagnose issues</li>
+                        <li><strong>Community Forum:</strong> Search or post in our community forum - other users may have solutions</li>
+                    </ul>
+
+                    <h2>Related Articles</h2>
+                    <ul>
+                        <li><a href="storage-limits.html">Understanding Storage Limits</a></li>
+                        <li><a href="login-problems.html">Login and Account Issues</a></li>
+                        <li><a href="uploading.html">How to Upload Files</a></li>
+                    </ul>
+                </div>
+
+                <div class="helpful">
+                    <h3>Was this article helpful?</h3>
+                    <div class="helpful-buttons">
+                        <button class="helpful-btn">👍 Yes</button>
+                        <button class="helpful-btn">👎 No</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>CloudSync</h4>
+                    <p>Secure cloud storage and file synchronization for everyone.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Product</h4>
+                    <a href="#">Features</a>
+                    <a href="#">Pricing</a>
+                    <a href="#">Download</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <a href="../index.html">Help Center</a>
+                    <a href="#">Contact</a>
+                    <a href="#">Status</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <a href="#">About</a>
+                    <a href="#">Blog</a>
+                    <a href="#">Careers</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 CloudSync. Help Center created by Alan Bono - Technical Documentation Specialist</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
